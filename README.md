@@ -23,13 +23,6 @@ Whether someone needs to smile, breathe, or feel seen — this app is here to su
 
 ---
 
-## 📸 Preview
-
-![Mood-Based App Screenshot](https://via.placeholder.com/800x400.png?text=App+Screenshot+Placeholder)  
-*(Add a real screenshot here from your project if possible)*
-
----
-
 ## 🛠️ Tech Stack
 
 - **HTML5**
@@ -50,4 +43,3 @@ Whether someone needs to smile, breathe, or feel seen — this app is here to su
 
 ---
 
-## 📁 File Structure
