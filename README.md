@@ -18,8 +18,7 @@ Whether someone needs to smile, breathe, or feel seen — this app is here to su
 
 ## 🚀 Live Demo
 
-👉 [Click to Try the App](https://github.com/JeevanJamesmoonjely/Mood-based-quote-.git)  
-*(Replace `yourusername` with your actual GitHub username)*
+👉 [Click to Try the App](https://jeevanjamesmoonjely.github.io/Mood-based-quote-/)  
 
 ---
 
