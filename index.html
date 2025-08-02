@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood-Based Quote Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      width: 280px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #fff;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #f0f0f0;
+    }
+    .quote-box {
+      margin-top: 25px;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💬 Mood-Based Life Advice</h1>
+
+  <input id="moodInput" placeholder="Type your mood (e.g., sad, happy, angry)" />
+  <button onclick="generateQuote()">Get Advice</button>
+
+  <div class="quote-box" id="quoteBox"></div>
+
+  <script>
+    const quotes = {
+      happy: [
+        "Never apologize for your happiness. Let it light up those around you.",
+        "Enjoy this moment fully — it’s what you’ve worked for.",
+        "Let joy be your fuel, not just a feeling."
+      ],
+      sad: [
+        "I know it hurts. But healing begins the moment you stop pretending you're fine.",
+        "Let yourself feel. Then remind yourself: this moment is temporary.",
+        "One day, this pain will be your strength story. You just have to hold on."
+      ],
+      angry: [
+        "Breathe. You don’t need to burn everything down to be heard.",
+        "Your anger is valid. But don't let it build walls where you need bridges.",
+        "You are not your anger. Let it pass — not control you."
+      ],
+      tired: [
+        "Rest is not weakness. It’s your body asking for love.",
+        "You’re not lazy — you’re human. Take a breath. You’ll come back stronger.",
+        "Even machines overheat. You? You deserve care too."
+      ],
+      default: [
+        "Wherever you are right now — it's a chapter, not the whole story.",
+        "You are allowed to grow, restart, or walk away. It's your life.",
+        "Believe this: someone like you is meant for something powerful. Don’t give up."
+      ]
+    };
+
+    function generateQuote() {
+      const input = document.getElementById("moodInput").value.toLowerCase();
+      let mood = "default";
+
+      if (input.includes("happy")) mood = "happy";
+      else if (input.includes("sad")) mood = "sad";
+      else if (input.includes("angry") || input.includes("mad")) mood = "angry";
+      else if (input.includes("tired") || input.includes("exhausted") || input.includes("drained")) mood = "tired";
+
+      const moodQuotes = quotes[mood];
+      const randomIndex = Math.floor(Math.random() * moodQuotes.length);
+      document.getElementById("quoteBox").innerText = moodQuotes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
